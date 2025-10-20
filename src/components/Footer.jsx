@@ -1,29 +1,29 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Linkedin, CalendarDays } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Linkedin, CalendarDays } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-700 text-white py-14">
+    <footer className="bg-black text-neutral-200 py-16">
       <div className="container mx-auto px-6">
         {/* Top Section */}
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-10">
-          {/* Name and Title */}
+          {/* Name & Title */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center md:text-left"
           >
-            <h3 className="text-2xl font-bold mb-2 font-display">
+            <h3 className="text-2xl font-bold mb-2 text-white font-display">
               Makhosazana Lisa Mthethwa
             </h3>
-            <p className="text-primary-100">
+            <p className="text-neutral-400">
               Digital Project Manager & Visual Storyteller
             </p>
           </motion.div>
 
-          {/* Links and Call to Action */}
+          {/* Social & CTA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -36,7 +36,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/makhosazana-lisa-m-b6abb1133/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center text-primary-100 hover:text-white transition-colors"
+              className="inline-flex items-center text-neutral-400 hover:text-white transition-colors"
             >
               <Linkedin className="w-5 h-5 mr-2" />
               Connect on LinkedIn
@@ -44,15 +44,15 @@ const Footer = () => {
 
             {/* Calendly Button */}
             <motion.a
-              href="https://calendly.com/makhosazana-mthethwa" // Replace with her actual Calendly link
+              href="https://calendly.com/makhosazana-mthethwa"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center justify-center bg-gradient-to-r from-secondary-600 to-primary-600 text-white px-5 py-2.5 rounded-lg shadow-md hover:opacity-90 transition-opacity font-medium"
+              className="inline-flex items-center justify-center border border-white text-white px-5 py-2.5 rounded-lg hover:bg-white hover:text-black transition-all duration-200 font-medium"
             >
               <CalendarDays className="w-5 h-5 mr-2" />
-              Book Appointment
+              BOOK APPOINTMENT
             </motion.a>
           </motion.div>
         </div>
@@ -63,14 +63,14 @@ const Footer = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
           viewport={{ once: true }}
-          className="border-t border-primary-600 mt-10 pt-8 text-center text-primary-200 text-sm"
+          className="border-t border-neutral-800 mt-10 pt-8 text-center text-sm text-neutral-500"
         >
           <p>
-            © {new Date().getFullYear()} Makhosazana Lisa Mthethwa. All rights
-            reserved.
+            © {new Date().getFullYear()} Makhosazana Lisa Mthethwa. All rights reserved.
           </p>
           <p className="mt-1">
-            Designed & Developed by <span className="text-white font-medium">lihleguma.dev</span>
+            Designed & Developed by{" "}
+            <span className="text-white font-medium">lihleguma.dev</span>
           </p>
         </motion.div>
       </div>
@@ -79,3 +79,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

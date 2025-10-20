@@ -1,83 +1,88 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Mail, Phone, CalendarDays } from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Mail, Phone, CalendarDays } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
   };
 
   return (
-    <section id="contact" className="py-20 section-gradient-light">
+    <section id="contact" className="py-24 bg-white text-neutral-900">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="max-w-4xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
-          <h2 className="text-4xl font-bold text-center mb-12 font-display gradient-text">Let's Connect</h2>
-          
-          <div className="grid md:grid-cols-2 gap-12">
+          <h2 className="text-4xl font-bold text-center mb-16 font-display text-black">
+            Let’s Connect
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-16">
+            {/* Left Column */}
             <div>
-              <h3 className="text-2xl font-semibold mb-6 text-primary-700">Let's Collaborate</h3>
-              <p className="text-neutral-700 mb-6">
-                Whether you’re looking to launch a digital campaign, refresh your brand visuals, 
-                or need project management support — I’d love to connect and bring your ideas to life.
+              <h3 className="text-2xl font-semibold mb-6 text-black">
+                Let’s Collaborate
+              </h3>
+              <p className="text-neutral-600 mb-8 leading-relaxed">
+                Whether you’re planning a digital campaign, refining your brand
+                visuals, or need project management support — let’s bring your
+                ideas to life with clarity and creativity.
               </p>
-              
-             {/* Contact Details */}
-              <div className="space-y-5">
+
+              {/* Contact Info */}
+              <div className="space-y-5 text-neutral-700">
                 <div className="flex items-center">
-                  <Mail className="w-6 h-6 text-primary-600 mr-3" />
+                  <Mail className="w-5 h-5 text-black mr-3" />
                   <a
-                    href="mailto:makhosazana.mthethwa@email.com"
-                    className="text-neutral-700 hover:text-primary-600 transition-colors"
+                    href="mailto:khosmthethwa96@gmail.com"
+                    className="hover:text-black transition-colors"
                   >
                     khosmthethwa96@gmail.com
                   </a>
                 </div>
 
                 <div className="flex items-center">
-                  <Phone className="w-6 h-6 text-primary-600 mr-3" />
-                  <span className="text-neutral-700">+27 76 877 6425</span>
+                  <Phone className="w-5 h-5 text-black mr-3" />
+                  <span>+27 76 877 6425</span>
                 </div>
               </div>
 
               {/* Calendly Button */}
               <motion.a
-                href="https://calendly.com/makhosazana-mthethwa" // Replace with her real Calendly link
+                href="https://calendly.com/makhosazana-mthethwa"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center mt-8 px-6 py-3 bg-gradient-to-r from-primary-600 to-secondary-600 text-white rounded-lg shadow-md hover:opacity-90 transition-all font-medium"
+                className="inline-flex items-center mt-10 px-6 py-3 border border-black text-black rounded-lg hover:bg-black hover:text-white transition-all duration-200 font-medium"
               >
                 <CalendarDays className="w-5 h-5 mr-2" />
-                Book Appointment
+                BOOK APPOINTMENT
               </motion.a>
             </div>
 
             {/* Right Column - Form */}
             <motion.form
               onSubmit={handleSubmit}
-              className="space-y-6 bg-white p-8 rounded-2xl shadow-lg border border-neutral-200"
+              className="space-y-6 bg-neutral-50 p-8 rounded-2xl shadow-sm border border-neutral-200"
             >
               <div>
                 <label
@@ -92,7 +97,7 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-primary-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-all"
                   required
                 />
               </div>
@@ -110,7 +115,7 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-primary-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-all"
                   required
                 />
               </div>
@@ -128,16 +133,16 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows="4"
-                  className="w-full px-4 py-3 border border-primary-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-all"
                   required
                 />
               </div>
 
               <motion.button
                 type="submit"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full btn-primary"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                className="w-full bg-black text-white py-3 rounded-lg hover:bg-neutral-800 transition-all font-semibold"
               >
                 Send Message
               </motion.button>

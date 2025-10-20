@@ -54,11 +54,25 @@ module.exports = {
           700: '#44403c',
           800: '#292524',
           900: '#1c1917',
-        }
+        },
       },
+
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         display: ['Poppins', 'sans-serif'],
+      },
+
+      fontSize: {
+        xs: ['0.75rem', { lineHeight: '1rem' }],      // 12px
+        sm: ['0.85rem', { lineHeight: '1.3rem' }],    // 13.6px
+        base: ['0.95rem', { lineHeight: '1.6rem' }],  // 15.2px
+        lg: ['1.05rem', { lineHeight: '1.8rem' }],    // 16.8px
+        xl: ['1.25rem', { lineHeight: '1.9rem' }],    // 20px
+        '2xl': ['1.5rem', { lineHeight: '2.1rem' }],  // 24px
+        '3xl': ['1.75rem', { lineHeight: '2.2rem' }], // 28px
+        '4xl': ['2rem', { lineHeight: '2.4rem' }],    // 32px
+        '5xl': ['2.5rem', { lineHeight: '2.8rem' }],  // 40px
+        '6xl': ['3rem', { lineHeight: '1' }],         // 48px
       },
     },
   },
