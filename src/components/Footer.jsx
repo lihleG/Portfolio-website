@@ -18,8 +18,8 @@ const Footer = () => {
             <h3 className="text-2xl font-bold mb-2 text-white font-display">
               Makhosazana Lisa Mthethwa
             </h3>
-            <p className="text-neutral-400">
-              Digital Project Manager & Visual Storyteller
+            <p className="text-neutral-400 whitespace-nowrap">
+              Account & Project Manager | Executive Virtual Assistant | Sytems-Driven Professional
             </p>
           </motion.div>
 

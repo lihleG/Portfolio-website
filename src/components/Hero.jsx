@@ -6,21 +6,21 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-white pt-24 text-neutral-900"
+      className="min-h-screen flex items-center justify-center bg-white pt-20 sm:pt-24 text-neutral-900"
       aria-labelledby="hero-heading"
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-3 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+          className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
         >
           {/* Left: Intro Text */}
           <div className="text-center md:text-left">
             <motion.h1
               id="hero-heading"
-              className="text-4xl md:text-6xl font-display font-bold mb-6 leading-tight text-black"
+              className="text-3xl sm:text-4xl md:text-6xl font-display font-bold mb-5 leading-tight text-black"
             >
               Hi, I’m{" "}
               <span className="underline underline-offset-4 decoration-[1.5px] decoration-black">
@@ -32,11 +32,12 @@ const Hero = () => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-lg md:text-xl text-neutral-700 mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed"
+              className="text-sm sm:text-base md:text-lg text-neutral-700 mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed whitespace-nowrap"
             >
               Account & Project Manager | Executive Virtual Assistant | Systems-Driven Professional
             </motion.p>
 
+            {/* Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -51,8 +52,8 @@ const Hero = () => {
               </a>
 
               <a
-                href="/assets/Makhosazana_Mthethwa_CV.pdf"
-                target="_blank"
+                href="Makhosazana Mthethwa Resume.pdf"
+                download="Makhosazana Mthethwa Resume.pdf"
                 rel="noopener noreferrer"
                 className="border border-neutral-400 text-neutral-600 px-8 py-3 rounded-full font-medium tracking-wide hover:bg-neutral-100 transition-all duration-300"
               >
@@ -65,10 +66,10 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7 }}
-              className="mt-8 text-sm text-neutral-600"
+              className="mt-6 text-xs sm:text-sm text-neutral-600 whitespace-nowrap"
             >
-              <span className="mr-2">📍 Johannesburg, South Africa</span>
-              <span className="mx-2">•</span>
+              <span className="mr-1">📍 Johannesburg, South Africa</span>
+              <span className="mx-1">•</span>
               <a
                 href="mailto:khosmthethwa96@gmail.com"
                 className="underline hover:text-black"
@@ -85,17 +86,17 @@ const Hero = () => {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="flex justify-center md:justify-end"
           >
-            <div className="relative w-full max-w-sm border border-neutral-200 rounded-xl overflow-hidden shadow-md bg-white">
+            <div className="relative w-full max-w-xs sm:max-w-sm border border-neutral-200 rounded-xl overflow-hidden shadow-md bg-white">
               <img
                 src={heroImage}
                 alt="Makhosazana Lisa Mthethwa"
-                className="w-full h-[450px] object-cover filter grayscale hover:grayscale-0 transition duration-500"
+                className="w-full h-[380px] sm:h-[450px] object-cover filter grayscale hover:grayscale-0 transition duration-500"
               />
             </div>
           </motion.div>
         </motion.div>
 
-        {/* Minimal Scroll Indicator */}
+        {/* Scroll Indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -121,3 +122,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
