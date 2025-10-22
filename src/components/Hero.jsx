@@ -28,13 +28,20 @@ const Hero = () => {
               </span>
             </motion.h1>
 
+            {/* Responsive Subtitle Line */}
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-sm sm:text-base md:text-lg text-neutral-700 mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed whitespace-nowrap"
+              className="text-sm sm:text-base md:text-lg text-neutral-700 mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed text-center md:text-left"
             >
-              Account & Project Manager | Executive Virtual Assistant | Systems-Driven Professional
+              Account & Project Manager{" "}
+              <span className="hidden sm:inline">|</span>
+              <br className="sm:hidden" />
+              Executive Virtual Assistant{" "}
+              <span className="hidden sm:inline">|</span>
+              <br className="sm:hidden" />
+              Systems-Driven Professional
             </motion.p>
 
             {/* Buttons */}
@@ -66,7 +73,7 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7 }}
-              className="mt-6 text-xs sm:text-sm text-neutral-600 whitespace-nowrap"
+              className="mt-6 text-xs sm:text-sm text-neutral-600 text-center md:text-left"
             >
               <span className="mr-1">📍 Johannesburg, South Africa</span>
               <span className="mx-1">•</span>
@@ -122,4 +129,5 @@ const Hero = () => {
 };
 
 export default Hero;
+
 

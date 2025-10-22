@@ -18,8 +18,14 @@ const Footer = () => {
             <h3 className="text-2xl font-bold mb-2 text-white font-display">
               Makhosazana Lisa Mthethwa
             </h3>
-            <p className="text-neutral-400 whitespace-nowrap">
-              Account & Project Manager | Executive Virtual Assistant | Sytems-Driven Professional
+            <p className="text-neutral-400 text-sm md:text-base leading-tight text-center md:text-left">
+              Account & Project Manager{" "}
+              <span className="hidden sm:inline">|</span>
+              <br className="sm:hidden" />
+              Executive Virtual Assistant{" "}
+              <span className="hidden sm:inline">|</span>
+              <br className="sm:hidden" />
+              Systems-Driven Professional
             </p>
           </motion.div>
 
@@ -66,7 +72,8 @@ const Footer = () => {
           className="border-t border-neutral-800 mt-10 pt-8 text-center text-sm text-neutral-500"
         >
           <p>
-            © {new Date().getFullYear()} Makhosazana Lisa Mthethwa. All rights reserved.
+            © {new Date().getFullYear()} Makhosazana Lisa Mthethwa. All rights
+            reserved.
           </p>
           <p className="mt-1">
             Designed & Developed by{" "}
@@ -79,4 +86,6 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
 
