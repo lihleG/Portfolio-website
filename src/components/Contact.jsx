@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, CalendarDays } from "lucide-react";
+import { PopupButton } from "react-calendly";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -65,18 +66,19 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Calendly Button */}
-              <motion.a
-                href="https://calendly.com/makhosazana-mthethwa"
-                target="_blank"
-                rel="noopener noreferrer"
+              {/* Calendly Popup Button */}
+              <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center mt-10 px-6 py-3 border border-black text-black rounded-lg hover:bg-black hover:text-white transition-all duration-200 font-medium"
+                className="inline-flex items-center mt-10"
               >
-                <CalendarDays className="w-5 h-5 mr-2" />
-                BOOK APPOINTMENT
-              </motion.a>
+                <PopupButton
+                  url="https://calendly.com/khosmthethwa96/30min"
+                  rootElement={document.getElementById("root")}
+                  text="BOOK APPOINTMENT"
+                  className="px-6 py-3 border border-black text-black rounded-lg hover:bg-black hover:text-white transition-all duration-200 font-medium flex items-center justify-center"
+                />
+              </motion.div>
             </div>
 
             {/* Right Column - Form */}
